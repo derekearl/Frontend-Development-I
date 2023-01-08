@@ -1,0 +1,17 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr, 3fr;
+
+}
+
+
+#profile {
+    width: 200px;
+    height: 200px;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 100px;
+    text-align: center;
+}
