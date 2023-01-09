@@ -33,6 +33,14 @@ a:link {
     color: white;
 }
 
+a:visited{
+    color: salmon;
+}
+
+a:hover{
+    color: black;
+}
+
 footer{
     text-align: center;
     background-color: white;
