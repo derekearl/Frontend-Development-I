@@ -29,6 +29,10 @@ body{
     color: white;
 }
 
+a:link {
+    color: white;
+}
+
 footer{
     text-align: center;
     background-color: white;
