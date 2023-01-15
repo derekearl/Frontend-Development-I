@@ -1,0 +1,49 @@
+header, footer {
+    background-color: #203F5F;
+    color: white;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    border-radius: 10px;
+}
+
+header h1, h2 {
+    margin: 5px 0 5px 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+img {
+    border: 1px solid black;
+    object-fit: cover;
+    width: 462.63px;
+    max-height: 823.41px;
+}
+
+
+.principle {
+    background-color: rgb(214, 214, 214);
+    border: 1px solid black;
+    border-radius: 20px 20px 0 0;
+    margin: 10px 10px 10px 10px;
+}
+
+.principle h3, a, img, p {
+    margin: 10px 2.25% 10px 2.25%;
+}
+
+.principle h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.principle-header {
+    background-color: #2E5A88;
+    border-radius: 20px 20px 0 0;
+    color: white;
+}
+
