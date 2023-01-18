@@ -8,16 +8,20 @@ header, footer {
 
 header h1, h2 {
     margin: 5px 0 5px 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr;
+    font-family: 'Courier New', Courier, monospace;
+
 }
 
 img {
     border: 1px solid black;
     object-fit: cover;
+    margin: auto;
 
 }
 
@@ -45,6 +49,8 @@ img {
 main{
     background-color: grey;
 }
+
+
 
 
 
