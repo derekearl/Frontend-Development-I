@@ -1,0 +1,22 @@
+@media only screen and (min-width: 768px) {
+
+
+
+#personas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#persona1, #persona2 {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+#persona1 img, #persona2 img {
+    padding: 10px;
+}
+
+#scenarios {text-align: center;
+}
+
+}

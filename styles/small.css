@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Merriweather&family=Source+Sans+Pro&display=swap');
+
+header, footer{
+    text-align: center;
+    background-color: #463876;
+    color: #ffffff;
+    border-radius: 30px;
+    font-family: font-family, 'Source Sans Pro', sans-serif;
+}
+
+/*This is for the home page*/
+
+p{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+section{
+    text-align: center;
+}
+
+body{
+    background-color: #d3d3d3;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+
+p{
+    text-align: center;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: lightgray;
+}
+
+a:hover {
+    transform: scale(1,3);
+    font-weight: bold;
+}
+
+#logo{
+    height: 250px;
+    border-style: solid;
+
+}
+
+/*This is for the Audience Page */
+
+#estate{
+    height: 442px;
+}
+
+#persona1, #persona2{
+    border-style: solid;
+}
+
+#mayor{
+    padding-left: 10px;
+}
+
+#personas{
+    background-color: rgb(70,56,118);
+    color: white;
+    justify-content: space-evenly;
+}
+
+#scenarios{
+    text-align: center;
+}
+
+li{
+    text-align: center;
+}
+
+ol{
+    text-align: left;
+}
+
+/*This is for the Design Page*/
+
+.color-div{
+    border: 3px solid #463876;
+}
+
+#primary-color{
+    background-color: #463876;
+    color: #ffffff;
+}
+
+#secondary-color{
+    background-color: #d3d3d3;
+}
