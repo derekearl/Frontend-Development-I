@@ -1,1 +1,2 @@
-button.addEventListener('click', function)
+button.addEventListener();
+const link = document.querySelector('a');
