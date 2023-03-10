@@ -1,16 +1,19 @@
 /* CSS for Header */
 header {
     background-color: #463876;
+    color: white;
+    text-align: center;
 }
 header img {
     grid-row: 2/3;
     width: 100%;
 }
 
+
+
 #header-date {
     background-color: #463876;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
     color: white;
     padding: .5vh 4vw;
 }
