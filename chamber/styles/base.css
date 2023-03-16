@@ -80,14 +80,42 @@ main {
     display: grid;
 }
 
-#hero, #event, #weather, #news, #spotlight, #spotlight1, #spotlight2, #spotlight3, #join {
-    background-color: silver;
+.icon {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#event, #weather, #news, #spotlight, #spotlight1, #spotlight2, #spotlight3, #join {
+    background-color: white;
     border: 1px solid #463876;
     margin: 1vh 1vw 1vh 1vw;
     padding-right: 2vw;
     padding-left: 2vw;
     height: 30vh;
     text-align: center;
+}
+
+#hero{
+    position: relative;
+    display: grid;
+}
+
+#hero button {
+   position: absolute;
+    bottom: 5%; 
+    right: 5%;
+    height: 25%;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #463876;
+    color: white;
+}
+
+#hero-img{
+    max-width: 100%;
+    height: 100%;
 }
 
 #spotlight {

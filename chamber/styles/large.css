@@ -27,13 +27,15 @@
         #header-date {
             justify-items: center;
             background-color: #463876;
+
         }
         #header-date p {
             font-size: 20px;
         }
         nav {
             background-color: #463876;
-            padding-left: 40%;
+            padding-left: 22%;
+            padding-top: 10%;
         }
         /*CSS for Main*/
         main {
@@ -45,6 +47,16 @@
             grid-row: 1/3;
             height: 62vh;
             align-self: center;
+        }
+
+        #hero-img{
+            width: 100%;
+            grid-column: 2/3;
+            grid-row: 1/3;
+        }
+
+        #hero button{
+            bottom: -2%;
         }
 
         #event{
@@ -71,6 +83,14 @@
             grid-column: 3/4;
             grid-row: 1/4;
             display: flex;
+            flex-direction: column;
+            align-self: center;
+            height: 94vh;
+        }
+
+        #spotlight3 {display: flex;
+            grid-column: 3/4;
+            grid-row: 1/4;
             flex-direction: column;
             align-self: center;
             height: 94vh;
