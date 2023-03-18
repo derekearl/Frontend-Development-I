@@ -113,6 +113,8 @@ main {
     color: white;
 }
 
+
+
 #hero-img{
     max-width: 100%;
     height: 100%;
@@ -157,3 +159,153 @@ footer{
     #lower-footer {
         line-height: 1vh;
     }
+
+    /* Discover Page*/
+    #discover-main, .cards {
+        padding: 0 2vw 0 2vw;
+        text-align: center;
+    }
+    
+    #discover-gallery, .cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background-color: #463876;
+        padding: 1vh 0 1vh 0;
+        border: 3px solid silver;
+        color: white;
+    }
+    
+    #discover-gallery img, .cards {
+        width: 90%;
+        align-items: center;
+    }
+
+    .cards section img {
+        flex: 1;
+    }
+
+    /* Join Page */
+#join-main {
+    width: 90%;
+    margin: 0 auto;
+    display: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#join-main-header {
+    text-align: center;
+}
+
+#join-main-flex-form {
+    flex: 1.5;
+}
+
+#join-main-flex-info {
+    font-size: 1.5em;
+    flex: 1;
+}
+
+label, input {
+    display: block;
+    font-size: 1.5em;
+}
+
+label {
+    margin-top: 20px;
+}
+
+input {
+    height: 44px;
+}
+
+input[type="radio"] {
+    height: 20px;
+}
+
+form input:required {
+    border-left: red solid 6px;
+}
+
+form input:required:valid {
+    border-left: green solid 6px;
+}
+
+#radio {
+    display: grid;
+    grid-template-columns: 60px 300px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#radio label, #radio input {
+    margin: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+input, textarea {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+input[type="submit"] {
+    height: 80px;
+    width: 80%;
+    background-color: #2F3E46;
+    color: white;
+    border-radius: 10px;
+}
+
+/*Directory Page*/
+
+#directory-main h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+.cards {
+    margin: 0 auto;
+    display: none;
+}
+
+.cards section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cards section img {
+    flex: 1;
+}
+
+#view {
+    text-align: center;
+    font-size: 48px;
+    margin: 25px;
+}
+
+#view button {
+    background-color: #463876;
+    border: 3px outset #354F52;
+    color: white;
+}
+
+table {
+    width: 75%;
+    margin: 50px auto;
+    font-size: 1.2em;
+}
+td {
+    padding: 5px;
+    display: block; /*Keep block for mobile. Use display: table-cell for medium and large css*/
+}
+tr:nth-of-type(even) {
+    background-color: #84A98C;
+}
+table a {
+    color: navy;
+}

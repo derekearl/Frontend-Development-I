@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Join Page</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script src="scripts/chamber.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,10 +19,9 @@
             <nav>
                 <ul id="header-nav">
                     <li><a href="chamber.html">Home</a></li>
-                    <li><a href="#">Directory</a></li>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Join</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,8 +30,71 @@
             <h1>Mangham Chamber of Commerce</h1>
         </section>
     </header>
-
-    
+    <main>
+        <h1 id="join-main-header">Join the Mangham Chamber of Commerce!</h1>
+        <section id="join-main">
+            <form method="get" action="thankyou.html" id="join-main-flex-form">
+                <label for="fname">First Name</label>
+                <input id="fname" name="firstname" required>
+                <label for="lname">Last Name</label>
+                <input id="lname" name="lastname" required>
+                <label for="title">Business Position Title</label>
+                <span>Only letters, dashes and spaces, 7 or more letters</span>
+                <input id="title" name="businesstitle" pattern="[A-Za-z -]+" minlength="7">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="name@domain.com" required>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="xxx-xxx-xxxx" required>
+                <label for="business">Business Name</label>
+                <input id="business" name="businessname" required>
+                <label for="membership">Enter your membership choice:</label>
+                <div id="radio">
+                    <input type="radio" id="one" name="membership-level" value="one">
+                    <label for="one">Non-Profit</label>
+                    <input type="radio" id="two" name="membership-level" value="two">
+                    <label for="two">Bronze</label>
+                    <input type="radio" id="three" name="membership-level" value="three">
+                    <label for="three">Silver</label>
+                    <input type="radio" id="four" name="membership-level" value="four">
+                    <label for="four">Gold</label>
+                </div>
+                <label for="message">Business Description</label>
+                <textarea id="message"></textarea>
+                <input id="date" type="hidden" name="today-date">
+                <input type="submit" value="Join the Chamber">
+            </form>
+            <div id="join-main-flex-info">
+                <h2>Membership Levels</h2>
+                <h3>Non-Profit Membership</h3>
+                <ul>    
+                    <li>For non-profit organizations.</li>
+                    <li>No fee!</li>
+                </ul>
+                <h3>Bronze Membership</h3>
+                <ul>
+                    <li>Fee: $50/month</li>
+                    <li>15% Discounts on Events</li>
+                    <li>10% Discounts on Advertising</li>
+                </ul>
+                <h3>Silver Membership</h3>
+                <ul>
+                    <li>Fee: $100/month</li>
+                    <li>50% Discounts on Events</li>
+                    <li>50% Discounts on Advertising</li>
+                    <li>Free participation in the Trade Fair</li>
+                </ul>
+                <h3>Gold Membership</h3>
+                <ul>
+                    <li>Fee: $250/month</li>
+                    <li>50% Discounts on Events</li>
+                    <li>50% Discounts on Advertising</li>
+                    <li>Free participation in the Trade Fair</li>
+                    <li>Five FREE featured ads per year</li>
+                    <li>One FREE training per quarter</li>
+                </ul>
+            </div>
+        </section>
+    </main>
     <footer>
         <img src="images/manghamlogo.jpg" alt="Mangham Chamber of Commerce Logo">
         <div id="upper-footer">

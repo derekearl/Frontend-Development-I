@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Page</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script src="scripts/chamber.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="header-date">
+            <p><span id="date"></span></p>
+            <button id="hamburger"><span>&#9776;</span><span>X</span></button>
+            <nav>
+                <ul id="header-nav">
+                    <li><a href="chamber.html">Home</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img src="images/manghamlogo.jpg" alt="Mangham Chamber of Commerce Logo">
+        <section id="header-title">
+            <h1>Mangham Chamber of Commerce</h1>
+        </section>
+    </header>
+    <main id="directory-main">
+        <h1>Business Directory</h1>
+        <div id="view">
+            <button type="button" id="cards">&#9783;</button>
+            <button type="button" id="list">&#9868;</button>
+        </div>
+        <div class="cards"></div>
+        <table></table>
+    </main>
+    <footer>
+        <img src="images/manghamlogo.jpg" alt="Mangham Chamber of Commerce Logo">
+        <div id="upper-footer">
+            <p>248 Hixon Street, Mangham, Louisiana 71295</p>
+            <p>mangham.org</p>
+            <p>(318) 248-5555</p>   
+        </div>
+        <hr>
+        <div id="lower-footer">
+           <p>&copy;<span id="year"></span> Mangham Chamber of Commerce</p>
+           <p>Derek Earl</p>
+           <p>WDD 230 Projects</p>
+           <p>Last Notification: <span id="updated"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

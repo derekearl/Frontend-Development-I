@@ -56,7 +56,11 @@
         }
 
         #hero button{
-            bottom: -2%;
+            bottom: 4%;
+
+        }
+        button:hover{
+            color: black;
         }
 
         #event{
@@ -127,5 +131,16 @@
             grid-row: 3/4;
             display: flex;
             justify-content: space-evenly;
+        }
+
+        /* Discover Page*/
+
+        #discover-main{
+            width: 100%;
+        }
+        #discover-gallery{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: 100%;
         }
 }
