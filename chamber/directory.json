@@ -1,0 +1,67 @@
+{
+    "Directory": [
+      {
+        "name": "Cypress State Realty",
+        "address": "507 Madeline Street, Mangham LA, 71259",
+        "phone": "318-728-4043",
+        "website": "https://www.cypressstaterealty.com/",
+        "image": "images/cylogo.jpg"
+      },
+      {
+        "name": "Game Mechanix",
+        "address": "156 Morgan Road, Mangham LA, 71259",
+        "phone": "318-248-4367",
+        "website": "https://www.gamemechanix.com",
+        "image": "images/game.jpg"
+      },
+      {
+        "name": "Mangham Pool Hall",
+        "address": "723 Hixon Street, Mangham LA, 71259",
+        "phone": "318-435-6932",
+        "website": "https://www.manghampoolhall.com",
+        "image": "images/poolhall.jpg"
+      },
+      {
+        "name": "Mangham U-Pak-It",
+        "address": "108 Louisiana Street, Mangham LA, 71259",
+        "phone": "318-248-2348",
+        "website": "https://www.manghamupakit.com",
+        "image": "images/upakit.jpg"
+      },
+      {
+        "name": "Mangham High School",
+        "address": "810 Main Street, Mangham LA, 71259",
+        "phone": "318-248-2485",
+        "website": "https://www.manghamhighschool.com",
+        "image": "images/school.jpg"
+      },
+      {
+        "name": "Mangham Home Care",
+        "address": "714 Broadway Street, Mangham LA, 71259",
+        "phone": "318-248-5615",
+        "website": "https://www.manghamhomecare.com",
+        "image": "images/homecare.jpg"
+      },
+      {
+        "name": "Mangham Drugs",
+        "address": "104 Louisiana St. Mangham LA, 71259",
+        "phone": "318-248-5735",
+        "website": "https://www.manghamrx.com",
+        "image": "images/rx.jpg"
+      },
+      {
+        "name": "Strong's Resteraunt",
+        "address": "114 Broadway Street Mangham LA, 71259",
+        "phone": "318-248-5335",
+        "website": "https://www.strongsfamilyresteraunt.com",
+        "image": "images/strongs.jpg"
+      },
+      {
+        "name": "Poindexter Taxidermy",
+        "address": "90 Poindexter Road, Mangham LA, 71259",
+        "phone": "248-248-7766",
+        "website": "https://www.poindextertaxidermy.com",
+        "image": "images/taxidermy.jpg"
+      }
+    ]
+  }
