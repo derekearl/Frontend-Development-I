@@ -1,86 +1,149 @@
-const url = 'https://derekearl.github.io/wdd230/chamber/directory.json';
-const cardButton = document.querySelector("#cards");
-const listButton = document.querySelector("#list");
 
-async function getBusinessData() {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.table(data.businesses);  // note that we reference the business array of the data object given thestructure of the json file
-    displayBusinesses(data.businesses);
-    cardButton.addEventListener('click', () => {        
-        displayBusinesses(data.businesses);
-    });
-    listButton.addEventListener('click', () => {        
-        displayTable(data.businesses);
-    });
-}
+// Responsive Hamburger Menu
+const nav = document.querySelector('.navigation');
+nav.addEventListener('click', ()=>
+{nav.classList.toggle('shown')});
 
-
-
-const displayBusinesses = (businesses) => {
-    document.querySelector(".cards").innerHTML = "";
-    document.querySelector(".cards").style.display = 'flex';
-    document.querySelector("table").innerHTML = "";
-    cards = document.querySelector('div.cards'); // select the output container element
-
-    businesses.forEach((business) => {
-      // Create elements to add to the div.cards element
-      let card = document.createElement('section');
-      let h2 = document.createElement('h2');
-      let logo = document.createElement('img');
-      let address = document.createElement('p');
-      let phone = document.createElement('p');
-      let website = document.createElement('a');
-  
-      // Build the h2 content out to show the business's full name - finish the template string
-      h2.textContent = business.name;
-      address.textContent = business.address;
-      phone.textContent = business.phone;
-      website.textContent = business.website;
-      website.href = business.website;
-  
-      // Build the image logo by setting all the relevant attribute
-      logo.setAttribute('src', business.image);
-      logo.setAttribute('alt', `Business Logo`);
-      logo.setAttribute('loading', 'lazy');
-  
-      // Append the section(card) with the created elements
-      card.appendChild(h2);
-      card.appendChild(logo);
-      card.appendChild(address);
-      card.appendChild(phone);
-      card.appendChild(website);
-      cards.appendChild(card);
-    } // end of forEach loop
-  )} // end of function expression
-
-function displayTable(businesses) {
-    document.querySelector(".cards").innerHTML = "";
-    document.querySelector(".cards").style.display = 'none';
-    document.querySelector("table").innerHTML = "";
-    const table = document.querySelector('table');
-
-    businesses.forEach((business) => {
-    let tr = document.createElement('tr');
-    let td_name = document.createElement('td');
-    let td_address = document.createElement('td');
-    let td_phone = document.createElement('td');
-    let td_website = document.createElement('td');
-    let td_website_link = document.createElement('a');
-
-    td_name.textContent = business.name;
-    td_phone.textContent = business.phone;
-    td_address.textContent = business.address;
-    td_website_link.textContent = business.website;
-    td_website_link.href = business.website;
-
-    tr.appendChild(td_name);
-    tr.appendChild(td_phone);
-    tr.appendChild(td_address);
-    tr.appendChild(td_website_link);
-
-    table.appendChild(tr);
+fetch('https://derekearl.github.io/wdd230/chamber/directory.json')
+  .then(function (response) {
+    return response.json();
   })
-}
+  .then(function (jsonObject) {
+    console.table(jsonObject);  // temporary checking for valid response and data parsing
+    const directory = jsonObject['directory'];
+    directory.forEach(displayProphets);
+    
+ });
 
-getBusinessData();
+  function displayProphets(directory) {  // Create elements to add to the document
+    let card = document.createElement('section');
+    let h2 = document.createElement('h2');    // Change the textContent property of the h2 element to contain the prophet's full name
+    let address = document.createElement('p');
+    let phone = document.createElement('p');
+    let website = document.createElement('p');
+    let img = document.createElement('img');
+    h2.textContent = `${directory.name}`;
+    address.textContent = `${directory.address}`;
+    phone.textContent = `${directory.phone}`;
+    website.textContent = `${directory.website}`;
+    img.setAttribute('src', directory.imageurl);
+    img.setAttribute('alt', `${directory.name}`);
+    img.classList.add("directory");
+    h2.classList.add("directory")
+    // Add/append the section(card) with the h2 element
+    card.appendChild(h2);
+    card.appendChild(address);
+    card.appendChild(phone);
+    card.appendChild(website);
+    card.appendChild(img);
+    // Add/append the existing HTML div with the cards class with the section(card)
+    document.querySelector('div.cards').appendChild(card);
+  }
+
+  const listView = document.querySelector('#listview');
+  const cardView = document.querySelector('#cardview');
+  listView.addEventListener('click', clearCards);
+  cardView.addEventListener('click', clearList);
+//   to add list
+function clearCards() {
+  let div = document.createElement('div');
+  div.classList.add('myDynamicTable');
+ document.querySelector('main').appendChild(div);
+ let table = document.createElement('table');
+  div.appendChild(table);
+  table.classList.add('tableDirectory');
+  let cards = document.querySelectorAll('.cards');
+  cards.forEach((item)=>{
+      item.remove();
+  });
+  fetch('https://johnshirley1.github.io/wdd230/chamber/jsons/data.json')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    console.table(jsonObject);  // temporary checking for valid response and data parsing
+    const directory = jsonObject['directory'];
+    directory.forEach(populateTable);
+    
+ });
+};
+function populateTable(directory) {
+        let tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + directory.name + '</td>' +
+        '<td>' + directory.address + '</td>' +
+        '<td>' + directory.phone + '</td>' +
+        '<td>' + directory.website + '</td>';
+        document.querySelector('.tableDirectory').appendChild(tr);
+
+};
+function clearList() {
+  let cards = document.createElement('div');
+  cards.classList.add('cards');
+  document.querySelector('main').appendChild(cards);
+  tableIdToRemove = document.querySelector(".myDynamicTable");
+  tableIdToRemove.parentNode.removeChild(tableIdToRemove);
+  
+  
+  fetch('https://johnshirley1.github.io/wdd230/chamber/jsons/data.json')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    console.table(jsonObject);  // temporary checking for valid response and data parsing
+    const directory = jsonObject['directory'];
+    directory.forEach(displayCards);
+    
+ });
+
+  function displayCards(directory) {  // Create elements to add to the document
+    let card = document.createElement('section');
+    let h2 = document.createElement('h2');    // Change the textContent property of the h2 element to contain the prophet's full name
+    let address = document.createElement('p');
+    let phone = document.createElement('p');
+    let website = document.createElement('p');
+    let img = document.createElement('img');
+    h2.textContent = `${directory.name}`;
+    address.textContent = `${directory.address}`;
+    phone.textContent = `${directory.phone}`;
+    website.textContent = `${directory.website}`;
+    img.setAttribute('src', directory.imageurl);
+    img.setAttribute('alt', `${directory.name}`);
+    img.classList.add("directory");
+    h2.classList.add("directory")
+    // Add/append the section(card) with the h2 element
+    card.appendChild(h2);
+    card.appendChild(address);
+    card.appendChild(phone);
+    card.appendChild(website);
+    card.appendChild(img);
+    // Add/append the existing HTML div with the cards class with the section(card)
+    document.querySelector('div.cards').appendChild(card);
+  }
+};
+
+
+function changeStyles() {
+//changing styles in js
+if((window.innerWidth > 798 && window.innerWidth < 802) || (window.innerWidth > 1178 && window.innerWidth < 1182)){
+  let div = document.createElement('div');
+  div.classList.add('.myDynamicTable');
+ document.querySelector('main').appendChild(div);
+  let cards = document.querySelectorAll('.cards');
+  cards.forEach((item)=>{
+      item.remove();
+  });
+  fetch('https://johnshirley1.github.io/wdd230/chamber/jsons/data.json')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    console.table(jsonObject);  // temporary checking for valid response and data parsing
+    const directory = jsonObject['directory'];
+    directory.forEach(populateTable);
+    
+ });
+};
+    };
+
+// eventlisteners for resizing window and loading page
+window.addEventListener('resize', changeStyles);
