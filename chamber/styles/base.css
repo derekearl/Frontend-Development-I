@@ -99,7 +99,6 @@ main {
 
 #hero{
     position: relative;
-    display: grid;
 }
 
 #hero button {
