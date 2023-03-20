@@ -1,20 +1,32 @@
-const url = 'https://derekearl.github.io/wdd230/chamber/directory.json';
+const url1 = 'https://derekearl.github.io/wdd230/chamber/directory.json';
 
 
 const cardButton = document.querySelector("#cards");
 const listButton = document.querySelector("#list");
 
 async function getDirectoryData() {
-    const respone = await fetch(url);
+    const respone = await fetch(url1);
     const data = await respone.json();
     console.table(data.directory);
     displayDirectory(data.directory);
+    cardButton.addEventListener('click', () => {
+        displayDirectory(data.directory1);
+    });
+    listButton.addEventListener('click', () => {
+        displayTable(data.directory1);
+    });
+
 }
 
 const displayDirectory = (directory) => {
-    const cards = document.querySelector('div.cards');
+        document.querySelector(".cards").innerHTML = "";
+        document.querySelector(".cards").style.display = 'flex';
+        document.querySelector("table").innerHTML = "";
+        const cards = document.querySelector('div.cards');
 
-    directory.forEach((directory) => {
+
+
+    directory.forEach((directory1) => {
         let card = document.createElement('section');
         let h2 = document.createElement('h2');
         let logo = document.createElement('img');
@@ -22,13 +34,13 @@ const displayDirectory = (directory) => {
         let phone = document.createElement('p');
         let website = document.createElement('a');
 
-        h2.textContent = directory.name;
-        address.textContent = directory.address;
-        phone.textContent = directory.phone;
-        website.textContent = directory.website;
-        website.href = business.website;
+        h2.textContent = directory1.name;
+        address.textContent = directory1.address;
+        phone.textContent = directory1.phone;
+        website.textContent = directory1.website;
+        website.href = directory1.website;
 
-        logo.setAttribute('src', directory.image);
+        logo.setAttribute('src', directory1.image);
         logo.setAttribute('alt', `Business Logo`);
         logo.setAttribute('loading', 'lazy');
         logo.setAttribute('width', '300');
@@ -48,7 +60,7 @@ const displayDirectory = (directory) => {
         document.querySelector("table").innerHTML = "";
         const table = document.querySelector('table');
     
-        businesses.forEach((directory) => {
+        directory.forEach((directory) => {
         let tr = document.createElement('tr');
         let td_name = document.createElement('td');
         let td_address = document.createElement('td');
