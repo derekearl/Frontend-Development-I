@@ -15,3 +15,36 @@ document.querySelector('#year').innerHTML = year;
 let currentdate = document.lastModified;
 document.querySelector('#updated').textContent = currentdate;
 document.querySelector("#updated").innerHTML = document.lastModified;
+
+
+//weather
+
+const apiURL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/71259?unitGroup=metric&key=57NALRV6F75DVP8VRY5NQWN5P&contentType=json";
+const getWeather = async () => {
+    const response = await fetch(apiURL);
+    const data = await response.json();
+    console.log(data);
+
+    let t = data.currentConditions.temp;
+    document.querySelector('#degree').textContent = t.toFixed(1);
+
+    let image = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/SVG/1st%20Set%20-%20Color/${data.currentConditions.icon}.svg`;
+    document.querySelector('#speed').textContent = data.currentConditions.windspeed;
+    document.querySelector('#weather-forecast').textContent =  data.currentConditions.conditions;
+    document.querySelector('#weather-icon').src = image;
+    document.querySelector('#weather-icon').alt= data.currentConditions.conditions + ' icon';
+
+    // Windchill Info Here
+    let degree = document.querySelector("#degree").textContent;
+    console.log(degree);
+    let speed = document.querySelector("#speed").textContent;
+    console.log(speed);
+
+    let chill = Math.round((35.74 + (0.6215 * degree))-(35.75 * Math.pow(speed,0.16)) + (0.4275*degree*Math.pow(speed,0.16)));
+
+    if (degree <= 50 && speed >= 3) {
+        document.querySelector("#chill").textContent = chill;
+    };
+}
+
+getWeather();

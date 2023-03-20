@@ -100,6 +100,10 @@ main {
         display: block;
 }
 
+#weather-icon{
+    width: 25%;
+}
+
 #event, #weather, #news, #spotlight, #spotlight1, #spotlight2, #spotlight3, #join {
     background-color: white;
     border: 1px solid #463876;
