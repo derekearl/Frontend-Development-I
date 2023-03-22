@@ -371,8 +371,7 @@ td {
     display: block; /*Keep block for mobile. Use display: table-cell for medium and large css*/
 }
 tr:nth-of-type(even) {
-    background-color: #84A98C;
-}
-table a {
-    color: navy;
+    background-color: #463876;
+    color: white;
+
 }

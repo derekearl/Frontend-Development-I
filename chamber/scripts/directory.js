@@ -10,10 +10,10 @@ async function getDirectoryData() {
     console.table(data.directory);
     displayDirectory(data.directory);
     cardButton.addEventListener('click', () => {
-        displayDirectory(data.directory1);
+        displayDirectory(data.directory);
     });
     listButton.addEventListener('click', () => {
-        displayTable(data.directory1);
+        displayTable(data.directory);
     });
 
 }
@@ -60,7 +60,7 @@ const displayDirectory = (directory) => {
         document.querySelector("table").innerHTML = "";
         const table = document.querySelector('table');
     
-        directory.forEach((directory) => {
+        directory.forEach((directory1) => {
         let tr = document.createElement('tr');
         let td_name = document.createElement('td');
         let td_address = document.createElement('td');
@@ -68,11 +68,11 @@ const displayDirectory = (directory) => {
         let td_website = document.createElement('td');
         let td_website_link = document.createElement('a');
     
-        td_name.textContent = business.name;
-        td_phone.textContent = business.phone;
-        td_address.textContent = business.address;
-        td_website_link.textContent = business.website;
-        td_website_link.href = business.website;
+        td_name.textContent = directory1.name;
+        td_phone.textContent = directory1.phone;
+        td_address.textContent = directory1.address;
+        td_website_link.textContent = directory1.website;
+        td_website_link.href = directory1.website;
     
         tr.appendChild(td_name);
         tr.appendChild(td_phone);
