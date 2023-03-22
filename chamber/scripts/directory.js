@@ -22,7 +22,7 @@ const displayDirectory = (directory) => {
         document.querySelector(".cards").innerHTML = "";
         document.querySelector(".cards").style.display = 'flex';
         document.querySelector("table").innerHTML = "";
-        const cards = document.querySelector('div.cards');
+        cards = document.querySelector('div.cards');
 
 
 

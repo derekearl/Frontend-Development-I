@@ -19,7 +19,7 @@ document.querySelector("#updated").innerHTML = document.lastModified;
 
 //weather
 
-const apiURL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/71259?unitGroup=metric&key=57NALRV6F75DVP8VRY5NQWN5P&contentType=json";
+const apiURL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/71259?unitGroup=us&key=57NALRV6F75DVP8VRY5NQWN5P&contentType=json";
 const getWeather = async () => {
     const response = await fetch(apiURL);
     const data = await response.json();
@@ -48,3 +48,17 @@ const getWeather = async () => {
 }
 
 getWeather();
+
+//Last Visited Section
+
+let lastVisit = Number(window.localStorage.getItem("lastVisit"));
+let currentVisit = Date.now() / 1000 / 60 / 60 / 24;
+
+if (lastVisit == 0) {
+    document.querySelector("#diff").innerHTML = "This is your first visit! Welcome!"
+} else {
+document.querySelector("#diff").innerHTML = Math.floor(currentVisit - lastVisit);
+}
+
+localStorage.setItem("lastVisit", currentVisit);
+
