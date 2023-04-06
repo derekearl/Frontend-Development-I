@@ -4,6 +4,10 @@ function toggleMenu() {
     document.querySelector('#hamburger').classList.toggle('open');
 }
 
+let currentdate = document.lastModified;
+document.querySelector('#updated').textContent = currentdate;
+document.querySelector("#updated").innerHTML = document.lastModified;
+
 const x = document.querySelector('#hamburger');
 x.onclick = toggleMenu;
 
