@@ -22,6 +22,11 @@ nav ul.open {
 nav {
     grid-column: 1/5;
 }
+
+nav ul li a {
+    color: #600363;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -46,7 +51,6 @@ body{
 
 #hero{
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
 }
 
 #hero-box{
@@ -76,6 +80,11 @@ body{
     width: 25%;
 }
 
+#home-grid{
+    display: grid;
+}
+
+
 
 
 /* CSS for the Fresh Page */
@@ -85,7 +94,8 @@ form {
     margin-top: 30px;
     padding: 20px;
     text-align: center;
-    background-color: #F0EEE5;
+    background-color: #68ABDE;
+    color: white;
 
 }
 
@@ -114,19 +124,3 @@ input[type=text], select {
   input[type=submit]:hover {
     background-color: #600363;
   }
-
-  @media screen and (min-width: 1024px) {
-    .content {
-      padding: 100px 0 0;
-      width: 100%;
-      display: flex;
-    }
-    form {
-      margin: 20px auto;
-      justify-self: center;
-    }
-
-    #fresh-main{
-    background-color: #F0EEE5;
-    }
-}
